@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import './App.css';
 
 function App() {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:9090/")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>all blogs</h1>
-        {blogs && blogs.map((blog) => <div key={blog.id}>{blog.title}</div>)}
+        <h1>22.8.2022</h1>
+        <h3>Soo...Are we schedule a date for the 22th of Aug?</h3>
+        <p>For the next test</p>
+        <h1>I will talk with Shiran its OK</h1>
+        {/* {blogs && blogs.map((blog) => <div key={blog.id}>{blog.title}</div>)} */}
       </header>
     </div>
   );
